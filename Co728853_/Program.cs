@@ -5,21 +5,25 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Co728853_
+namespace PeterIsTheRulerOfIT
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("peter rule the world");
+            Console.WriteLine("Peter Rules the IT Universe!");
             Download();
             Console.ReadLine();
         }
 
         static void Download()
         {
-            Thread.Sleep(4000);
-            Console.WriteLine("Downloading Complete!!!!#@");
+            Task.Run(() =>
+            {
+                Thread.Sleep(3000);
+                Console.WriteLine("Download Complete ...");
+            }
+                );
         }
     }
 }
